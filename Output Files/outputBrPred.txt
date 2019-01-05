@@ -1,0 +1,45 @@
+						ISSUE   EX	MEM	WB	COMMIT
+Add R7, R2, R3			1		2		3	4	
+Sub R4, R4, R1			2		3		4	5
+Beq R1, R3, 2			3		4		5	6
+Addi R2, R2, 3			6		7		8	9
+Bne R2, R8, -6			7		9		10	11
+Sub R4, R4, R1			11		12		13	14
+Beq R1, R3, 2			12		13		14	15
+Addi R2, R2, 3			13		14		15	16	
+Bne R2, R8, -6			14		16		17	18
+Sub R4, R4, R1			15		17		18	19
+Beq R1, R3, 2			17		18		19	20
+Addi R2, R2, 3			18		19		20	21
+Bne R2, R8, -6			19		21		22	23
+Ld R8, 6(R1)			23		24	25	29	30
+	
+					start cycle-end cycle
+Add R7, R2, R3			1-4	
+Sub R4, R4, R1			2-5
+Beq R1, R3, 2			3-6
+Addi R2, R2, 3			6-9
+Bne R2, R8, -6			7-11
+Sub R4, R4, R1			11-14
+Beq R1, R3, 2			12-15
+Addi R2, R2, 3			13-16	
+Bne R2, R8, -6			14-18
+Sub R4, R4, R1			15-19
+Beq R1, R3, 2			17-20
+Addi R2, R2, 3			18-21
+Bne R2, R8, -6			19-23
+Ld F8, 6(R1)			23-30
+
+REGISTER VALUES
+		R0		R1		R2		R3		R4		R5		R6		R7		R8		R9		R10		R11		R12		R13		R14		R15		R16		R17		R18		R19		R20		R21		R22		R23		R24		R25		R26		R27		R28		R29		R30		R31
+value:  0.0     2.0	    12.0 	2.0		1.0		6.0     0.0     5.0     12.0    0.0     0.0    	0.0     0.0     0.0		0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0     
+		F0		F1		F2		F3		F4		F5		F6		F7		F8		F9		F10		F11		F12		F13		F14		F15		F16		F17		F18		F19		F20		F21		F22		F23		F24		F25		F26		F27		F28		F29		F30		F31
+value:  0.0    	100.123 132.2	0.0		0.0 	0.0 	0.0     0.0     0.123   0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0     
+
+NON-ZERO MEMORY VALUES
+Addresses   Values
+4			8.0
+8			0.123
+12			5.75
+
+
